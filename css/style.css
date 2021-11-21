@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,100;1,300;1,400;1,900&display=swap');
+
+:root{
+	--color: #FDD2BF;
+}
+
+*{
+	font-family: 'Lato' , sans-serif;
+	margin: 0; padding: 0;
+	box-sizing: border-box;
+	text-transform: capitalize;
+	transition: all .2s linear;
+	text-decoration: none;
+}
+
+html{
+	font-size: 65%;
+}
+
+body{
+	overflow-x: hidden;
+}
+
+.heading{
+	margin: 2rem ;
+	padding-top: 3.25rem;
+	display: inline-block;
+	font-size: 4.5rem;
+	color: #FF6B6B;
+	position: relative;
+	letter-spacing: .2rem;
+}
+
+.heading::before ,.heading::after{
+	content: '';
+	position: absolute;
+	height: 3rem;
+	width: 3rem;
+	border-top: .5rem solid #FF6B6B;
+	border-left: .5rem solid #FF6B6B;
+}
+
+.heading::before{
+	top: 2rem;
+	left: -2.75rem;
+}
+
+.heading::after{
+	bottom: -1.5rem;
+	right: -2.75rem;
+	transform: rotate(180deg);
+}
+
+.header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: 1rem 2rem;
+	position: fixed;
+	right: 0; left: 0;
+}
+
+
+.header .logo{
+	font-size: 2.5rem;
+	color: #fff;
+	font-weight: bold;
+
+}
+
+.header .logo img{
+	max-width: 43px;
+	width: auto;
+	padding: 0 1rem ;
+	
+}
+
+.header .navbar ul{
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+} 
+
+.header .navbar ul li{
+	margin: 0 2.5rem;
+}
+
+.header .navbar ul li a{
+	color: #fff;
+	font-size: 2rem;
+
+}
+
+.header .navbar ul li a:hover{
+	color: #ccc ;
+	letter-spacing: .2rem;
+}
+
+.header .fa-bars{
+	color: #fff;
+	cursor: pointer;
+	font-size: 3rem;
+	display: none;
+}
+
+.home{
+	min-height: 100vh;
+	width: 100vw;
+	background:linear-gradient(#C70039, var(--color)) ;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+	text-align: center;
+	padding: 0 2rem;
+	/*position: relative;*/
+	overflow-x: hidden !important;
+
+}
+.home .slogans{
+	color: #fff;
+	font-size: 6rem;
+	text-shadow: 0 .3rem .6rem rgba(0, 0, 0, .4);
+}
+
+.home .request{
+	color: #eee;
+	font-size: 2.5rem;
+	font-weight: 400;
+	padding: .5rem 0 4rem;
+}
+
+.home_button{
+	flex-direction: column;
+}
+.home button{
+	height: 5rem;
+	width: 20rem;
+	background: #fff;
+	color: #444;
+	cursor: pointer;
+	border: none;
+	outline: 0;
+	margin: 0 6rem;
+	font-size: 2rem;
+	font-weight: 400;
+	box-shadow: 0 .3rem .6rem rgba(0, 0, 0, .3);
+}
+
+.home button:hover{
+	letter-spacing: .2rem;
+	font-weight: 600;
+}
+
+.home .wave{
+	position: absolute;
+	bottom: -3rem;
+	left: 0;
+	width: 100%;
+	height: 12rem;
+	background: url(../images/wave.png);
+	background-size: 100rem 12rem;
+	background-repeat: repeat-x;
+	animation:waves 10s linear infinite;
+}
+
+.home .wave2{
+	animation-direction: reverse;
+	opacity: .4;
+}
+
+.home .wave3{
+	animation-duration: 6.1s;
+	opacity: .6;
+}
+@keyframes waves{
+	0%{
+		background-position-x: 0;
+	}
+	100%{
+		background-position-x: 100rem ;
+	}
+}
+
+.donate{
+  min-height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.donate .row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donate .row .image img{
+  width:20vw;
+  padding-left: 5rem;
+}
+
+.donate .row .form-container{
+  width: 60%;
+  text-align: left;
+  margin-top: 10rem;
+  margin-left: 5rem;
+  padding:0 3rem 0 25rem;
+}
+
+.donate .row .form-container input, textarea{
+  outline: none;
+  border:none;
+  height:4rem;
+  background: none;
+  border-radius: .5rem;
+  box-shadow: .2rem .2rem .5rem rgba(0,0,0,.2);
+  padding:0 1rem;
+  margin:1rem 0;
+  font-size: 1.6rem;
+}
+
+.donate .row .form-container .inputBox{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.donate .row .form-container .inputBox input[type="text"]{
+  width: 49%;
+}
+
+.donate .row .form-container input[type="radio"]{
+
+}
+
+.donate .row .form-container input[type="email"]{
+  width: 100%;
+}
+
+.donate .row .form-container textarea{
+  width: 100%;
+  height:5rem;
+  padding:1rem; 
+  resize: none;
+}
+
+.donate .row .form-container input[type="submit"]{
+  background-color: #FF6B6B;
+  color:#fff;
+  cursor: pointer;
+  height:4rem; 
+  width: 10rem;;
+}
+
+.donate .row .form-container input[type="submit"]:hover{
+  opacity: .6;
+}
+
+.request{
+  width: 100vw;
+  text-align: center;
+}
+
+.request .row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.request .row .image img{
+  width:20vw;
+  padding-left: 5rem;
+}
+
+.request .row .form-container{
+  width: 60%;
+  text-align: left;
+  margin-top: 10rem;
+  margin-left: 5rem;
+  padding:0 3rem 0 25rem;
+}
+
+.request .row .form-container input, textarea{
+  outline: none;
+  border:none;
+  height:4rem;
+  background: none;
+  border-radius: .5rem;
+  box-shadow: .2rem .2rem .5rem rgba(0,0,0,.2);
+  padding:0 1rem;
+  margin:1rem 0;
+  font-size: 1.6rem;
+}
+
+.request .row .form-container .inputBox{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.request .row .form-container .inputBox input[type="text"]{
+  width: 49%;
+}
+
+.request .row .form-container input[type="radio"]{
+
+}
+
+.request .row .form-container input[type="email"]{
+  width: 100%;
+}
+
+.request .row .form-container textarea{
+  width: 100%;
+  height:5rem;
+  padding:1rem; 
+  resize: none;
+}
+
+.request .row .form-container input[type="submit"]{
+  background-color: #FF6B6B;
+  color:#fff;
+  cursor: pointer;
+  height:4rem; 
+  width: 10rem;;
+}
+
+.request .row .form-container input[type="submit"]:hover{
+  opacity: .6;
+}
+
+@media (max-width : 800px){
+	html{
+		font-size: 50%;
+	}
+
+	.header .fa-bars{
+		display: block;
+	}
+
+	.header .navbar{
+		position: fixed;
+		left: 0; top: -100%;
+		height: auto;
+		width: 100%;
+		background-color: #fff;
+		z-index: 1000;
+		border-top: 0.1rem solid rgba(0, 0, 0, .3);
+	}
+
+	.header .navbar ul{
+		height: 100%;
+		width: 100%;
+		flex-flow: column;
+	}
+
+	.header .navbar ul li{
+		margin: 1rem 0;
+	}
+
+	.header .navbar ul li a{
+		color: #444;
+		font-size: 3rem;
+	}
+
+	.header .fa-times{
+		transform: rotate(-90deg);
+	}
+
+	.header .nav-time{
+		top: 6rem;
+	}
+
+	.home .slogans{
+		font-size: 5rem;
+	}
+
+	.home .request{
+		font-size: 1.5rem;
+	}
+
+	.home button{
+		margin-bottom: 1.75rem;
+	}
+
+	.donate .row{
+		flex-flow: column-reverse;
+		padding: 0 2rem;
+	}
+
+	.donate .row .image img{
+		width: 100vw;
+	}
+}
